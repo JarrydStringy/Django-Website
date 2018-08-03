@@ -1,2 +1,2 @@
-# IFB299-Super-Sonic
-IFB299 - Super Sonic - Group 99
+# IFB299Group99 Super Sonic
+GIT Repository for Queensland University of Technology IFB299 Class, Team 99

@@ -27,7 +27,7 @@ class Customer(models.Model):
 	customerName = models.CharField(max_length=30)
 	customerPhone = models.IntegerField()
 	customerAddress = models.CharField(max_length=50)
-	customerBirthday = models.DateTimeField()
+	customerBirthday = models.DateField()
 	customerOccupation = models.CharField(max_length=30)
 	customerGender = models.CharField(choices=SEX_CHOICES, max_length=1)
 

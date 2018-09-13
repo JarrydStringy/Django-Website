@@ -41,6 +41,3 @@ class Vehicle(models.Model):
 	bodyType = models.CharField(max_length=20)
 	driveType = models.CharField(max_length=3)
 	wheelbase = models.CharField(max_length=7)
-
-
-#

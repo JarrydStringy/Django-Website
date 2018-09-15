@@ -4,16 +4,40 @@ from django.urls import include, path
 from rentals import views
 
 urlpatterns = [
+#Home page for public
 	#Home Page
     url(r'^$', views.home, name='home'),	# '^$' is for / which is the first page
+
+
+#Admin for modifying database from website
     #Admin
     url(r'^admin/', admin.site.urls),
-    #Individual customer
-    url(r'^customer/(\d+)/', views.customer_detail, name='customer_detail'),	#\d+ is 1 or more digit characters for unique pages
-    #Individual order
-    url(r'^order/(\d+)/', views.order_detail, name='order_detail'),
-    #Individual store
-    url(r'^store/(\d+)/', views.store_detail, name='store_detail'),
-    #Individual vehicle
-    url(r'^vehicle/(\d+)/', views.vehicle_detail, name='vehicle_detail'),
+
+
+#Management sites for data viewing
+    #Login Page
+    url(r'^login/', views.manage_login, name='manage_login'),
+
+    #Home page
+    url(r'^manage/', views.manage_home, name='manage_home'),
+
+    #Vehicles
+    url(r'^vehicles/', views.manage_vehicles, name='manage_vehicles'),
+    #Individual with ID
+    url(r'^vehicle/(\d+)/', views.vehicle_id, name='vehicle_id'),
+    
+    #Customers
+    url(r'^customers/', views.manage_customers, name='manage_customers'),
+    #Individual with ID
+    url(r'^customer/(\d+)/', views.customer_id, name='customer_id'),
+    
+    #Order
+    url(r'^orders/', views.manage_orders, name='manage_orders'),
+    #Individual with ID
+    url(r'^order/(\d+)/', views.order_id, name='order_id'),
+
+    #Store
+    url(r'^stores/', views.manage_stores, name='manage_stores'),
+    #Individual with ID
+    url(r'^store/(\d+)/', views.store_id, name='store_id'),
 ]

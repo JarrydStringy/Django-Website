@@ -1,0 +1,9 @@
+<div>
+	<h3>Customer ID: {{ customer.id }}</h3>
+	<p>Name: {{ customer.customerName }}</p>
+	<p>Phone: {{ customer.customerPhone }}</p>
+	<p>Address: {{ customer.customerAddress }}</p>
+	<p>Birthday: {{ customer.customerBirthday|date:"d M Y" }}</p>
+	<p>Occupation: ${{ customer.customerOccupation }}</p>
+	<p>Gender: {{ customer.customerGender }}</p>
+</div>

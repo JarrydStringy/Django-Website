@@ -1,0 +1,219 @@
+/* ALL (same for every page) */
+
+/* Formatting that applies to entire webpage body */
+html {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  min-width: 320px;
+  max-width: 90%; /* Create white space on left and right */
+  margin: auto; /* Causes entire page content to center in created space */
+  height: 100%;
+}
+
+/* Override default format for links */
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: black;
+}
+
+/* Adjust white space around entire web page for different screen sizes */
+@media screen and (max-width: 750px) {
+  body {
+  max-width: 95%;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+  max-width: 100%;
+  }
+}
+
+
+/* HEADER MENU (same for every page) */
+
+/* Hide alternate images for header */
+.home-2 {
+  display: none;
+}
+.home-3 {
+  display: none;
+}
+
+/* Specify position for whole menu bar */
+#menu {
+  vertical-align: top;
+  display: block;
+  height: 85px;
+  margin-top: 10px; /* Create whitespace above image */
+  margin-bottom: 5px; /* Create whitespace between header and main */
+  background-image: url("images/bg.png");
+  background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
+  background-size: cover; /* To cause the image to stretch to fill space */
+  display: inline-block;
+  width: 100%;
+}
+
+/* Specify position and size for home name */
+.home-name {
+  float: left;
+  padding-top: 5px;
+}
+
+/* Change header images for screens between 750px & 451px width */
+@media screen and (max-width: 750px) {
+  #menu {
+    height: 45px;
+  }
+  .home-1 {
+    display: none;
+  }
+  .home-2 {
+    display: block;
+  }
+}
+/* Change header images again for screens size 450px or smaller width */
+@media screen and (max-width: 450px) {
+  #menu {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 35px;
+  }
+  .home-2 {
+    display: none;
+  }
+  .home-3 {
+    display: block;
+  }
+}
+/* END HEADER MENU */
+
+
+/* MAIN */
+
+/* Specify image size and position for main content of page */
+#main {
+  margin-top: 5px;
+  min-height: calc(100vh - 230px);  /* To ensure footer sits at bottom of page */
+  padding-top: 55px;
+  background-image: url("images/bg.png");
+  background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
+  background-size: cover; /* To cause the image to stretch to fill space */
+  display: inline-block;
+  width: 100%;
+}
+
+/* Specify position for buttons */
+.button {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Specify styling for submit button */
+.button input[type="submit"] {
+  border-radius: 2px;
+  background: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  color: #757575;
+  font-weight: bold;
+  font-size: 25px;
+  width: 300px;
+  padding: 0;
+  height: 80px;
+}
+/* To change styling for submit button when mouse hovers over */
+.button input[type="submit"]:hover {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  background: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  color: #222;
+}
+
+/* Modify main content for screens 750px to 451px width */
+@media screen and (max-width: 750px) {
+  .button {
+    margin-top: 200px;
+  }
+}
+/* Modify search bar for screens 450px and smaller width */
+@media screen and (max-width: 450px) {
+  .button input[type="submit"] {
+    font-size: 20px;
+    width: 70px;
+    height: 30px;
+  }
+}
+
+/* END MAIN */
+
+
+/* FOOTER (same for every page) */
+
+/* Specify position, size, colour, font style and white space for whole footer */
+#sitemap {
+  margin-top: 10px;
+  padding-top: 15px;
+  padding-right: 35px;
+  background-color: #c6c6c6;
+  height: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
+  vertical-align: bottom;
+  display: block;  /* Ensure whole footer is its own block */
+  text-align: center;
+}
+
+/* Specify font details and spacing for first heading */
+#sitemap h1 {
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+  padding-left: 30px;
+  display: inline; /* Ensure each item is on the one line */
+}
+
+/* Specify font details and spacing for sub-heading */
+#sitemap h2 {
+  font-size: 12px;
+  font-weight: normal;
+  color: white;
+  padding-left: 20px;
+  display: inline; /* Ensure each item is on the one line */
+}
+
+/* Modify footer for screens between 750px & 451px width */
+@media screen and (max-width: 750px) {
+  #sitemap {
+  padding-right: 15px;
+  }
+  #sitemap h1 {
+  font-size: 12px;
+  padding-left: 12px;
+  }
+  #sitemap h2 {
+  font-size: 10px;
+  padding-left: 10px;
+  }
+}
+
+/* Modify footer for screens 450px and smaller width */
+@media screen and (max-width: 450px) {
+  #sitemap {
+  padding-right: 10px;
+  height: 30px;
+  padding-top: 5px;
+  }
+  #sitemap h1 {
+  font-size: 10px;
+  padding-left: 8px;
+  }
+  #sitemap h2 {
+  font-size: 8px;
+  padding-left: 5px;
+  }
+}
+/* END FOOTER */

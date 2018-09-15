@@ -1,0 +1,51 @@
+To run server
+	In cmd "python manage.py runserver
+	Site: localhost:8000
+
+To create a new app (rentals)
+	In cmd "python manage.py startapp rentals" (replace 'rentals' with name)
+	Open CRC>settings.py
+	Add 'vehicles' to INSTALLED_APPS
+
+To create models
+	Open rentals>models.py
+	From database, create use field types to create models
+	https://docs.djangoproject.com/en/2.1/ref/models/fields/
+	Modified CRC>admin.py
+
+To migrate changes
+	In cmd "python manage.py makemigrations"
+	To see migrations, in cmd "python manage.py showmigrations"
+	 - empty [ ] means not yet migrated
+	To migrate, in cmd "python manage.py migrate"
+	 - By runing showmigrations again, [x] should look like this
+	The new changes should be in the db
+To reset the database
+	Clear all in rentals>migrations except _init_
+	Rerun migrations
+
+Create a superuser
+	in cmd "python manage.py createsuperuser"
+	entered:
+		username: admin
+		password: SuperSonic
+	Confirmed at localhost:8000/admin
+
+Using python shell to search database
+	in cmd "python manage.py shell"
+		"from rentals.models import Order"
+		"Order.objects.all()" (shows all orders)
+		"orders = Order.objects.all()"
+		"order = orders[1]" (returns the first order in orders)
+		"order.orderID" (returns the first orders ID)
+	"order = Order.objects.get(orderID=1)"
+	"object.objectID" (Will do the same as the code above)
+
+Git commands:
+	To clone
+		in cmd "git clone copiedAddress"
+	To push changes
+		in cmd "git status"
+		 "git add -u" (The u is for changes)
+		 "git commit -m "Insert Message" (The -m adds a message)
+		 "git push origin master"

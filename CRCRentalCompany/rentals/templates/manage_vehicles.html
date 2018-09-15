@@ -1,0 +1,16 @@
+Delete me after
+<!--Comment-->
+<div>
+  {% for vehicle in vehicles %}
+    <div class="vehiclemake">     
+      <a href="{% url 'detail_vehicle' vehicle.id %}">
+        <h3>{{ vehicle.make|capfirst }}</h3>
+      </a>
+      <p>{{ vehicle.model }}</p>
+      <p>Series: {{ vehicle.series }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+
+<!--Filters: capFirst, date:"d M Y", -->

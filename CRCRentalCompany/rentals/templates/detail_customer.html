@@ -1,3 +1,5 @@
+{%  extends "base.html" %}
+{% block content %}
 <div>
 	<h3>Customer ID: {{ customer.id }}</h3>
 	<p>Name: {{ customer.customerName }}</p>
@@ -7,3 +9,4 @@
 	<p>Occupation: ${{ customer.customerOccupation }}</p>
 	<p>Gender: {{ customer.customerGender }}</p>
 </div>
+{% endblock %}

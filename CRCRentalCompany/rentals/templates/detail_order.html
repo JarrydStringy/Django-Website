@@ -1,3 +1,5 @@
+{%  extends "base.html" %}
+{% block content %}
 <div>
 	<h3>Order ID: {{ order.id }}</h3>
 	<p>Order Creation Date: {{ order.orderCreateDate|date:"d M Y" }}</p>
@@ -8,3 +10,4 @@
 	<p>Return Store ID: {{ order.returnStoreId }}</p>
 	<p>Return Date: {{ order.returnDate|date:"d M Y" }}</p>
 </div>
+{% endblock %}

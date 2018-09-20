@@ -12,13 +12,15 @@ from .models import Vehicle
 	#Home Page
 def home(request):
 	# return HttpResponse('<p>Sweet home Alabama</p>')
-	return render(request, 'home.html')
+	return render(request, 'login.html')
 
 #Management sites for data viewing
     #Login Page
 def manage_login(request):
 	# return HttpResponse('<p>INSERT LOGIN</p>')
 	return render(request, 'manage_login')
+# def login(request):
+	# return render(request, 'login.html')
 
     #Home page
 def manage_home(request):

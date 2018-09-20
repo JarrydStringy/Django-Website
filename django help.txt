@@ -31,6 +31,20 @@ Create a superuser
 		password: SuperSonic
 	Confirmed at localhost:8000/admin
 
+Users created:
+	Admin/Superuser
+		username: admin
+		password: SuperSonic
+	Management
+		username: manager
+		password: PassLevel1
+	Staff
+		username: staff
+		password: PassLevel2
+	Public
+		username: public
+		password: PassLevel3
+	
 Using python shell to search database
 	in cmd "python manage.py shell"
 		"from rentals.models import Order"
@@ -46,6 +60,7 @@ Git commands:
 		in cmd "git clone copiedAddress"
 	To push changes
 		in cmd "git status"
+		 "git add ." -> "git add ../"(with file name for new files)
 		 "git add -u" (The u is for changes)
 		 "git commit -m "Insert Message" (The -m adds a message)
 		 "git push origin master"

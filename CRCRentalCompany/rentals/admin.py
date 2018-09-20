@@ -9,7 +9,7 @@ from.models import Store
 class OrderAdmin(admin.ModelAdmin):
 	list_display = ["orderCreateDate", "pickupDate", "returnDate",
 		"customerId", "carId", "pickupStoreId", "returnStoreId"]
-
+#"rentalId" Need for all if adding again
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
@@ -24,4 +24,4 @@ class VehicleAdmin(admin.ModelAdmin):
 
 @admin.register(Store)
 class StoreAdmin(admin.ModelAdmin):
-	list_display = ["storeName"]
+	list_display = ["storeName", "storeAddress", "storePhone", "storeCity", "storeState"]

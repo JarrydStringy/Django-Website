@@ -1,4 +1,4 @@
-{%  extends "base.html" %}
+{%  extends "base_customer.html" %}
 {% block content %}
 <div>
 	<h3>Customer ID: {{ customer.id }}</h3>
@@ -6,7 +6,7 @@
 	<p>Phone: {{ customer.customerPhone }}</p>
 	<p>Address: {{ customer.customerAddress }}</p>
 	<p>Birthday: {{ customer.customerBirthday|date:"d M Y" }}</p>
-	<p>Occupation: ${{ customer.customerOccupation }}</p>
+	<p>Occupation: {{ customer.customerOccupation }}</p>
 	<p>Gender: {{ customer.customerGender }}</p>
 </div>
 {% endblock %}

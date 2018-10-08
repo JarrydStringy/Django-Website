@@ -4,29 +4,21 @@ from django.db import models
 #add null=True if may be unknown
 #use .TextField() for unrestricted length(description)
 class Order(models.Model):
-	# rentalId = models.IntegerField()#============================
+	# rentalId = models.IntegerField()
 	orderCreateDate = models.DateField()
 	pickupDate = models.DateField()
 	returnDate = models.IntegerField()
 	customerId = models.IntegerField()
-	# customerId = models.ManyToManyField('Customer')#=============
+	# customerId = models.ManyToManyField('Customer')
 	carId = models.DateField()
-	# carId = models.ManyToManyField('Vehicle')#===================
+	# carId = models.ManyToManyField('Vehicle')
 	pickupStoreId = models.IntegerField(null=True)
-	# pickupStoreId = models.ManyToManyField('Store')#=============
+	# pickupStoreId = models.ManyToManyField('Store')
 	returnStoreId = models.IntegerField(null=True)
-	# returnStoreId = models.ManyToManyField('Store')#=============
-
-	# orderCreateDate = models.DateField()
-	# pickupDate = models.DateField()
-	# returnDate = models.DateField()
-	# customerId = models.IntegerField()
-	# carId = models.DateField()
-	# pickupStoreId = models.IntegerField(null=True)
-	# returnStoreId = models.IntegerField(null=True)
+	# returnStoreId = models.ManyToManyField('Store')
 
 class Store(models.Model):
-	# storeId = models.IntegerField()#=============================
+	# storeId = models.IntegerField()
 	storeName = models.CharField(max_length=40)
 	storeAddress = models.CharField(max_length=50)
 	storePhone = models.CharField(max_length=30)
@@ -34,7 +26,7 @@ class Store(models.Model):
 	storeState = models.CharField(max_length=40)
 
 class Customer(models.Model):
-	# customerId = models.IntegerField()#===========================
+	# customerId = models.IntegerField()
 	customerName = models.CharField(max_length=30)
 	customerPhone = models.CharField(max_length=30)
 	customerAddress = models.CharField(max_length=50)
@@ -44,7 +36,7 @@ class Customer(models.Model):
 	customerGender = models.CharField(choices=SEX_CHOICES, max_length=1)
 
 class Vehicle(models.Model):
-	# vehicleId = models.IntegerField()#===================================
+	# vehicleId = models.IntegerField()
 	make = models.CharField(max_length=30)
 	model = models.CharField(max_length=30)
 	series = models.CharField(max_length=30)

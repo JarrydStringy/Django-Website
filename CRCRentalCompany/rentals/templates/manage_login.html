@@ -1,1 +1,45 @@
-Management Login
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- Including page data and sources (stylesheet/font) -->
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="CRC-style-login.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+      <!-- icon and splash screen -->
+	  <link rel="apple-touch-icon"href="images/homeicon2.jpeg"/>
+	  <link rel="apple-touch-startup-image" href="images/homeicon2.jpeg"/ >
+      <title>CRC - Log In</title>	
+    </head>	
+    <body>
+       <!-- include 'CRC-header.php';   // Include same header for all pages -->
+       <div id="menu"> <!-- Menu Bar as header of every web page, included using php -->
+        <div class="home-name"> <!-- Home menu link in form of image -->
+          <a href="CRC-home.html">
+            <!-- Image options - display determined on screen size -->
+            <img class="home-1" src="images/home-name-white.png" alt="Home" height="75"/>
+            <img class="home-2" src="images/home-name-white.png" alt="Home" height="55"/>
+            <img class="home-3" src="images/home-name-white.png" alt="Home" height="45"/>
+          </a>
+        </div>
+      </div>
+	  <div id="main">
+	    <div class="title">
+		  <h1>Log In</h1>
+		  <p>Please enter your CRC email & password.</p>
+		</div>
+		<div class="form">
+		  <form method="post" action=" ">
+		    <h1>Email</h1>
+			<input type="email" name="email" id="email">
+	
+			<h1>Password</h1>
+			<input type="password" name="pw" id="pw">
+			
+			<div class="submit-button">
+			  <input type="submit" name ="submit" id="submit" value="Log In">
+		    </div>
+		  </form>
+	    </div> 
+	  </div> 
+	</body>
+</html>

@@ -15,11 +15,11 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
 #Management sites for data viewing
-    #Login/Logout Page
-    # url(r'^login/$', auth_views.login, name='login'),
-    # url(r'^logout/$', auth_views.logout, name='logout'),
-    url(r'^login/', views.manage_login, name='manage_login'),
+    #Main Login Page
+    # url(r'^login/', views.login, name='login'),
 
+    #Mangement login page
+    url(r'^manage/login/', views.manage_login, name='manage_login'),
     #Home page
     url(r'^manage/', views.manage_home, name='manage_home'),
 
@@ -27,12 +27,12 @@ urlpatterns = [
     url(r'^vehicles/', views.manage_vehicles, name='manage_vehicles'),
     #Individual with ID
     url(r'^vehicle/(\d+)/', views.vehicle_id, name='vehicle_id'),
-    
+
     #Customers
     url(r'^customers/', views.manage_customers, name='manage_customers'),
     #Individual with ID
     url(r'^customer/(\d+)/', views.customer_id, name='customer_id'),
-    
+
     #Order
     url(r'^orders/', views.manage_orders, name='manage_orders'),
     #Individual with ID

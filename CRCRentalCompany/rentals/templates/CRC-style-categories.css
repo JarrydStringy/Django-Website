@@ -2,7 +2,7 @@
 
 /* Formatting that applies to entire webpage body */
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
   min-width: 320px;
   max-width: 90%; /* Create white space on left and right */
   margin: auto; /* Causes entire page content to center in created space */
-  height: 100%;
+  height: 100vh;
 }
 
 /* Override default format for links */
@@ -43,39 +43,107 @@ a:hover, a:visited, a:link, a:active
 .home-3 {
   display: none;
 }
+.employees-2 {
+  display: none;
+}
+.employees-3 {
+  display: none;
+}
+.logout-2 {
+  display: none;
+}
+.logout-3 {
+  display: none;
+}
+.customers-2 {
+  display: none;
+}
+.customers-3 {
+  display: none;
+}
+.vehicles-2 {
+  display: none;
+}
+.vehicles-3 {
+  display: none;
+}
 
 /* Specify position for whole menu bar */
 #menu {
   vertical-align: top;
   display: block;
-  height: 85px;
-  margin-top: 10px; /* Create whitespace above image */
-  margin-bottom: 5px; /* Create whitespace between header and main */
-  background-image: url("images/bg.png");
-  background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
-  background-size: cover; /* To cause the image to stretch to fill space */
-  display: inline-block;
-  width: 100%;
+  height: 65px;
+  margin-top: 10px; /* Create whitespace above images */
+  margin-bottom: 10px; /* Create whitespace between header and categories */
 }
 
 /* Specify position and size for home name */
 .home-name {
   float: left;
-  padding-top: 5px;
+}
+
+/* Specify position and size for account menu item */
+.logout {
+  float: right;
+  margin-top: 12px; /* Create whitespace above image, causing the image to sit lower */
+  display: block;
+}
+
+/* Specify position and size for search menu item */
+.employees {
+  float: right;
+  margin-top: 12px; /* Create whitespace above image, causing the image to sit lower */
+  padding-right: 15px; /* Create distance between Search and Account */
+}
+.customers {
+  float: right;
+  margin-top: 12px; /* Create whitespace above image, causing the image to sit lower */
+  padding-right: 15px; /* Create distance between Search and Account */
+}
+.vehicles {
+  float: right;
+  margin-top: 12px; /* Create whitespace above image, causing the image to sit lower */
+  padding-right: 15px; /* Create distance between Search and Account */
+}
+
+/* Specify position and size for categories on home page */
+.categories {
+  max-width: 100%; /* Ensure content fills only 100% of body space (90%/95% of screen) */
 }
 
 /* Change header images for screens between 750px & 451px width */
 @media screen and (max-width: 750px) {
   #menu {
-    height: 55px;
-  }
-  .home-name {
-    padding-top: 2px;
+    height: 45px;
   }
   .home-1 {
     display: none;
   }
   .home-2 {
+    display: block;
+  }
+  .employees-1 {
+    display: none;
+  }
+  .employees-2 {
+    display: block;
+  }
+  .logout-1 {
+    display: none;
+  }
+  .logout-2 {
+    display: block;
+  }
+  .customers-1 {
+    display: none;
+  }
+  .customers-2 {
+    display: block;
+  }
+  .vehicles-1 {
+    display: none;
+  }
+  .vehicles-2 {
     display: block;
   }
 }
@@ -84,10 +152,7 @@ a:hover, a:visited, a:link, a:active
   #menu {
     margin-left: 5px;
     margin-right: 5px;
-    height: 45px;
-  }
-  .home-name {
-    padding-top: 1px;
+    height: 35px;
   }
   .home-2 {
     display: none;
@@ -95,27 +160,66 @@ a:hover, a:visited, a:link, a:active
   .home-3 {
     display: block;
   }
+  .employees-2 {
+    display: none;
+  }
+  .employees-3 {
+    display: block;
+  }
+  .logout-2 {
+    display: none;
+  }
+  .logout-3 {
+    display: block;
+  }
+  .customers-2 {
+    display: none;
+  }
+  .customers-3 {
+    display: block;
+  }
+  .vehicles-2 {
+    display: none;
+  }
+  .vehicles-3 {
+    display: block;
+  }
 }
 /* END HEADER MENU */
 
 
-/* MAIN */
+/* TITLE BAR */
 
-/* Specify image size and position for main content of page */
+/* Specify title bar image, size and position */
 #main {
-  margin-top: 5px;
-  min-height: calc(100vh - 230px);  /* To ensure footer sits at bottom of page */
-  padding-top: 55px;
+  width: 100%;
+  margin-top: 10px;
+  min-height: calc(100vh - 160px);
+  /* To ensure footer sits at bottom of page */
+}
+
+/* Specify font details for title */
+#main h1 {
+  color: white;
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 20px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+#title {
+  width: 100%;
   background-image: url("images/bg.png");
   background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
   background-size: cover; /* To cause the image to stretch to fill space */
   display: inline-block;
-  width: 100%;
+  height: 80px;
 }
 
 /* Specify position for buttons */
 .button {
-  margin-top: 50px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -155,7 +259,7 @@ a:hover, a:visited, a:link, a:active
   }
 }
 
-/* END MAIN */
+/* TITLE BAR END */
 
 
 /* FOOTER (same for every page) */

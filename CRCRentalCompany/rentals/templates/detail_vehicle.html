@@ -1,4 +1,4 @@
-{%  extends "base.html" %}
+{%  extends "base_vehicle.html" %}
 {% block content %}
 <div>
 	<h3>Vehicle ID: {{ vehicle.id }}</h3>
@@ -6,7 +6,7 @@
 	<p>Model: {{ vehicle.model }}</p>
 	<p>Series: {{ vehicle.series }}</p>
 	<p>Year: {{ vehicle.year }}</p>
-	<p>Price: ${{ vehicle.price }}</p>
+	<p>Price: {{ vehicle.price }}</p>
 	<p>Engine: {{ vehicle.engine }}</p>
 	<p>Fuel Type: {{ vehicle.fuelType }}</p>
 	<p>Tank Capacity: {{ vehicle.tankCapacity }}</p>
@@ -15,6 +15,6 @@
 	<p>Transmission: {{ vehicle.transmission }}</p>
 	<p>Body Type: {{ vehicle.make }}</p>
 	<p>Drive Type: {{ vehicle.driveType }}</p>
-	<p>Wheelbase: {{ vehicle.wheelBase }}</p>	
+	<p>Wheelbase: {{ vehicle.wheelbase }}</p>
 </div>
 {% endblock %}

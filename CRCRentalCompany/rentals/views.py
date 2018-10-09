@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import Http404
 from django.template import Context, loader
+from django.shortcuts import render_to_response
 
 from .models import Order
 from .models import Store
@@ -13,13 +14,17 @@ from .models import Vehicle
 def home(request):
 	return render(request, 'main_home.html')
     #Login Page
-# def main_login(request):
-# 	return render(request, 'main_login')
+# def login(request):
+# 	return render(request, 'main_login.html')
+
+	#Review
+def review(request):
+	return render(request, 'customer_review.html')
 
 #Management sites for data viewing
 	#Management Login Page
-def manage_login(request):
-	return render(request, 'manage_login.html')
+# def manage_login(request):
+# 	return render(request, 'manage_login.html')
 
     #Home page
 def manage_home(request):

@@ -3,13 +3,12 @@
     <head>
       <!-- Including page data and sources (stylesheet/font) -->
       <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="CRC-style-vehicles.css">
+      <link rel="stylesheet" type="text/css" href="CRC-style-categories.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
       <!-- icon and splash screen -->
 	  <link rel="apple-touch-icon"href="images/homeicon2.jpeg"/>
 	  <link rel="apple-touch-startup-image" href="images/homeicon2.jpeg"/ >
-
-      <title> CRC - ORDERS </title>
+      <title> CRC - Customers </title>
     </head>
     <body>
           <!-- include 'CRC-header.php';   // Include same header for all pages -->
@@ -23,15 +22,15 @@
           </a>
         </div>
         <div class="logout"> <!-- Logout function in form of image -->
-        <a href="manage_home.html">
+        <a href="manage_login.html">
+        	<!-- Smaller icon options - display determined on screen size -->
         	<img class="logout-1" src="images/log-out.png" alt="Account" height="40"/>
-            <!-- Smaller icon options - display determined on screen size -->
             <img class="logout-2" src="images/log-out.png" alt="Account" height="30"/>
             <img class="logout-3" src="images/log-out.png" alt="Account" height="20"/>
           </a>
         </div>
         <div class="employees"> <!-- Employees page link in form of image -->
-          <a href="manage_home.html">
+          <a href="manage_employees.html">
             <!-- Icon options - display determined on screen size -->
             <img class="employees-1" src="images/employees.png" alt="Search" height="40"/>
             <img class="employees-2" src="images/employees.png" alt="Search" height="30"/>
@@ -56,12 +55,13 @@
         </div>
       </div>
       <div id="main">
-        <h1> ORDERS </h1> <!-- Title for page -->
-      	<div class="button">
-          <input type="submit" name="submit" value="Profiles" onclick="window.location='manage_customers.html';"/>
+        <div id="title">
+          <h1> STORE </h1> <!-- Title for page -->
         </div>
-        <div class="button">
-          <input type="submit" name="submit" value="Data" onclick="window.location='manage_customers.html';"/>
+        <div id="data">
+          <!-- Block -->
+          {% block content %}
+          {% endblock %}
         </div>
       </div>
       <!--include 'CRC-sitemap.php';  //Include same footer for all pages -->
@@ -78,11 +78,11 @@
           <h1> Customers </h1>
         </a>
         <h1> | </h1>
-        <a href="manage_home.html"> <!-- Search page link in form of image -->
+        <a href="manage_employees.html"> <!-- Search page link in form of image -->
           <h1> Employees </h1>
         </a>
         <h1> | </h1>
-        <a href="manage_home.html"> <!-- Account registration link in form of image -->
+        <a href="manage_login.html"> <!-- Account registration link in form of image -->
           <h1> Logout </h1>
         </a>
       </div>

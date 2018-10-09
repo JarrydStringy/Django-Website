@@ -2,24 +2,25 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include, path
 from rentals import views
-# from django.contrib.auth.views import login
-from django.contrib.auth import views as auth
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-#Home page for public
+#Public pages
 	#Home Page
     url(r'^$', views.home, name='home'),	# '^$' is for / which is the first page
+    #login
+    # url(r'^login/', views.login, name='login'),
+    url(r'^login/$', auth_views.login, {'template_name': 'templates/main_login.html'}, name='login'),
+    #Customer Reviews
+    url(r'^review/', views.review, name='review'),
 
 #Admin for modifying database from website
     #Admin
     url(r'^admin/', admin.site.urls),
 
 #Management sites for data viewing
-    #Main Login Page
-    # url(r'^login/', views.login, name='login'),
-
-    #Mangement login page
-    url(r'^manage/login/', views.manage_login, name='manage_login'),
+    # #Mangement login page
+    # url(r'^manage/login/', views.manage_login, name='manage_login'),
     #Home page
     url(r'^manage/', views.manage_home, name='manage_home'),
 

@@ -1,5 +1,5 @@
 To run server
-	In cmd "python manage.py runserver
+	In cmd "python manage.py runserver"		For mac: "python3..."
 	Site: localhost:8000
 
 To create a new app (rentals)

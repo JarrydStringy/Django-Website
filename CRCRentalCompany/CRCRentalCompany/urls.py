@@ -9,8 +9,8 @@ urlpatterns = [
 	#Home Page
     url(r'^$', views.home, name='home'),	# '^$' is for / which is the first page
     #login
-    # url(r'^login/', views.login, name='login'),
-    url(r'^login/$', auth_views.login, {'template_name': 'templates/main_login.html'}, name='login'),
+    url(r'^login/', views.login, name='login'),
+    # url(r'^login/$', auth_views.login, {'template_name': 'templates/main_login.html'}, name='login'),
     #Customer Reviews
     url(r'^review/', views.review, name='review'),
 

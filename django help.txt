@@ -64,9 +64,6 @@ Using python shell to search database
 Git commands:
 	To clone
 		in cmd "git clone copiedAddress"
-	To pull changes
-		in cmd "git fetch"
-		"git merge"
 	To push changes
 		in cmd "git status"
 		 "git add ." -> "git add ../"(with file name for new files)

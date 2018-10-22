@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rentals import views
 from django.contrib.auth import views as auth_views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
 #Public pages
@@ -44,3 +45,5 @@ urlpatterns = [
     #Individual with ID
     url(r'^store/(\d+)/', views.store_id, name='store_id'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()    

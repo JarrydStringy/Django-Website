@@ -1,9 +1,20 @@
-{% load staticfiles %}
+{% load static from staticfiles %}
 <!DOCTYPE html>
   <html>
     <body>
 
-      <img src="{% static 'home-icon.png' %}" alt="Test Image1"/>
+      <!-- If you want css styles -->
+      <!-- Old -->
+      <!-- <link rel="stylesheet" type="text/css" href="CRC-style-customers.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed"> -->
+      <!-- New -->
+      <link rel="stylesheet" type="text/css" href="{% static 'CRC-style-customers.css' %}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+
+      <!-- Normal html -->
+      <!-- <img src="images/home-icon.png" alt="Test Image1"/> -->
+      <!-- Django shit html -->
+      <img src="{% static "images/home-icon.png" %}" alt="Test Image1"/>
 
     </body>
   </html>

@@ -15,6 +15,13 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+TEMPLATE_DIRS = (
+   # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+   # Always use forward slashes, even on Windows.
+   # Don't forget to use absolute paths, not relative paths.
+   BASE_DIR + '../rentals/templates',
+)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -77,15 +84,15 @@ WSGI_APPLICATION = 'CRCRentalCompany.wsgi.application'
 DATABASES = {
     'default': {
         # This is for a sqlite database
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         # This is for a postgreSQL database
-        django.db.backends.postgresql_psycopg2
-        'NAME': os.environ.get('DB_NAME', ''),
-        'USER': os.environ.get('DB_USER', ''),
-        'PASSWORD': os.environ.get('DB_PASS', ''),
-        'HOST': 'localhost',
-        'PORT': '5432',
+        # django.db.backends.postgresql_psycopg2
+        # 'NAME': os.environ.get('DB_NAME', ''),
+        # 'USER': os.environ.get('DB_USER', ''),
+        # 'PASSWORD': os.environ.get('DB_PASS', ''),
+        # 'HOST': 'localhost',
+        # 'PORT': '5432',
     }
 }
 
@@ -127,3 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)

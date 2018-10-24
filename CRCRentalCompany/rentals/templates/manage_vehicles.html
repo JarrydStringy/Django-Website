@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
   <html lang="en">
     <head>
       <!-- Including page data and sources (stylesheet/font) -->
       <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="CRC-style-vehicles.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'CRC-style-customers.css' %}">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
       <!-- icon and splash screen -->
 	  <link rel="apple-touch-icon"href="images/homeicon2.jpeg"/>
@@ -17,9 +18,9 @@
         <div class="home-name"> <!-- Home menu link in form of image -->
           <a href="manage_home.html">
             <!-- Image options - display determined on screen size -->
-            <img class="home-1" src="images/home-name.png" alt="Home" height="75"/>
-            <img class="home-2" src="images/home-name.png" alt="Home" height="55"/>
-            <img class="home-3" src="images/home-name.png" alt="Home" height="45"/>
+            <img class="home-1" src="{% static 'images/home-name.png' %}" alt="Home" height="75"/>
+            <img class="home-2" src="{% static 'images/home-name.png' %}" alt="Home" height="55"/>
+            <img class="home-3" src="{% static 'images/home-name.png' %}" alt="Home" height="45"/>
           </a>
         </div>
         <div class="logout"> <!-- Logout function in form of image -->

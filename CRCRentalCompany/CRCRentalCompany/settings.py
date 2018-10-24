@@ -89,10 +89,11 @@ DATABASES = {
 
         # This is for a postgreSQL database
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'crc',
         'USER': 'SuperSonicAdmin',
         'PASSWORD': 'SuperSonic',
-        'HOST': 'crc.cfoisvv5pzjt.ap-southeast-2.rds.amazonaws.com',    # Localhost
+        'HOST': 'crc.cfoisvv5pzjt.ap-southeast-2.rds.amazonaws.com',    # Localhost if db stored locally
         'PORT': '5432',
     }
 }
@@ -134,8 +135,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static') # This is the directory that you should serve static files from in production.
+
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
+STATICFILES_DIRS = (    # This is the directory that you should serve static files from in development.
     os.path.join(BASE_DIR, 'assets'),
+)
+TEMPLATE_DIRS = (
+                os.path.join(PROJECT_DIR,'assets'),
 )

@@ -47,6 +47,10 @@ def customer_id(request, id):
 	except Customer.DoesNotExist:
 		raise Http404('Customer not found :(')
 	return render(request, 'detail_customer.html', {'customer': customer})
+	#Query set
+def customer_query(request):
+	customer = Customer.objects.raw('SELECT * FROM rentals_customer')
+	return render(request, 'query_customer.html', {'customer': customer})
 
 	#Orders
 def manage_orders(request):
@@ -58,6 +62,10 @@ def order_id(request, id):
 	except Order.DoesNotExist:
 		raise Http404('Order not found :(')
 	return render(request, 'detail_order.html', {'order': order})
+	#Query set
+def order_query(request):
+	order = Order.objects.raw('SELECT * FROM rentals_order')
+	return render(request, 'query_order.html', {'order': order})
 
 	#Stores
 def manage_stores(request):
@@ -69,3 +77,7 @@ def store_id(request, id):
 	except Store.DoesNotExist:
 		raise Http404('Store not found :(')
 	return render(request, 'detail_store.html', {'store': store})
+	#Query set
+def store_query(request):
+	store = Store.objects.raw('SELECT * FROM rentals_store')
+	return render(request, 'query_store.html', {'store': store})

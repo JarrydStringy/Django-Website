@@ -1,48 +1,49 @@
-{%  extends "base_vehicle.html" %}
+{%  extends "base_order.html" %}
 {% block content %}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
 <div>
-	<form method="get">
-	    {{ filter.form.as_p }}
-	    <button type="submit">Search</button>
+
+	<form action="/action_page.php">
+	  ID: <input type="text" name="fname"><br>
+	  <input type="submit" value="Submit">
 	</form>
-
-<table>
+<br>
+<table id="resultsTable">
+	<thead>
 	<tr>
-		<th>Vehicle ID</th>
-		<th>Make</th>
-		<th>Model</th>
-		<th>Series</th>
-		<th>Year</th>
-		<th>Price</th>
-		<th>Engine</th>
-		<th>Fuel Type</th>
-		<th>Tank Capacity</th>
-		<th>Power</th>
-		<th>Seats</th>
-		<th>Transmission</th>
-		<th>Body Type</th>
-		<th>Drive Type</th>
-		<th>Wheelbase</th>
-
-	{% for v in vehicle %}
+		<th>ID</th>
+		<th>Create Date</th>
+		<th>Pickup Date</th>
+		<th>Return Date</th>
+		<th>Customer ID</th>
+		<th>Car ID</th>
+		<th>Pickp Store ID</th>
+		<th>Return Store ID</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for o in order %}
 			<tr>
-				<th>{{ v.id }}</th>
-				<th>{{ v.make }}</th>
-				<th>{{ v.model }}</th>
-				<th>{{ v.series }}</th>
-				<th>{{ v.year }}</th>
-				<th>{{ v.price }}</th>
-				<th>{{ v.engine }}</th>
-				<th>{{ v.fuelType }}</th>
-				<th>{{ v.tankCapacity }}</th>
-				<th>{{ v.power }}</th>
-				<th>{{ v.seats }}</th>
-				<th>{{ v.transmission }}</th>
-				<th>{{ v.make }}</th>
-				<th>{{ v.driveType }}</th>
-				<th>{{ v.wheelbase }}</th>
+				<td>{{ o.id }}</td>
+				<td>{{ o.order_create_date }}</td>
+				<td>{{ o.pickup_date }}</td>
+				<td>{{ o.return_date }}</td>
+				<td>{{ o.customer_id }}</td>
+				<td>{{ o.car_id }}</td>
+				<td>{{ o.pickup_store_id }}</td>
+				<td>{{ o.return_store_id }}</td>
 	  	</tr>
 	{% endfor %}
+	</tbody>
 	</table>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready( function () {
+    $('#resultsTable').DataTable();
+} );
+</script>
 {% endblock %}

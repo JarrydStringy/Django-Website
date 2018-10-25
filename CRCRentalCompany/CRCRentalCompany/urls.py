@@ -34,16 +34,22 @@ urlpatterns = [
     url(r'^customers/', views.manage_customers, name='manage_customers'),
     #Individual with ID
     url(r'^customer/(\d+)/', views.customer_id, name='customer_id'),
+    #Query
+    url(r'^customer/query/', views.customer_query, name='customer_query'),
 
     #Order
     url(r'^orders/', views.manage_orders, name='manage_orders'),
     #Individual with ID
     url(r'^order/(\d+)/', views.order_id, name='order_id'),
+    #Query
+    url(r'^order/query/', views.order_query, name='order_query'),
 
     #Store
     url(r'^stores/', views.manage_stores, name='manage_stores'),
     #Individual with ID
     url(r'^store/(\d+)/', views.store_id, name='store_id'),
+    #Query
+    url(r'^store/query/', views.store_query, name='store_query'),
 
     # Analytics
     url(r'^analytics/', views.analytics, name='analytics'),

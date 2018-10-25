@@ -1,5 +1,8 @@
 {%  extends "base_vehicle.html" %}
 {% block content %}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
 <div>
 
 	<form action="/action_page.php">
@@ -7,7 +10,8 @@
 	  <input type="submit" value="Submit">
 	</form>
 <br>
-<table>
+<table id="resultsTable">
+	<thead>
 	<tr>
 		<th>Vehicle ID</th>
 		<th>Make</th>
@@ -24,26 +28,36 @@
 		<th>Body Type</th>
 		<th>Drive Type</th>
 		<th>Wheelbase</th>
-
+	</tr>
+	</thead>
+	<tbody>
 	{% for v in vehicle %}
 			<tr>
-				<th>{{ v.id }}</th>
-				<th>{{ v.make }}</th>
-				<th>{{ v.model }}</th>
-				<th>{{ v.series }}</th>
-				<th>{{ v.year }}</th>
-				<th>{{ v.price }}</th>
-				<th>{{ v.engine }}</th>
-				<th>{{ v.fuel_type }}</th>
-				<th>{{ v.tank_capacity }}</th>
-				<th>{{ v.power }}</th>
-				<th>{{ v.seats }}</th>
-				<th>{{ v.transmission }}</th>
-				<th>{{ v.make }}</th>
-				<th>{{ v.drive_type }}</th>
-				<th>{{ v.wheelbase }}</th>
+				<td>{{ v.id }}</td>
+				<td>{{ v.make }}</td>
+				<td>{{ v.model }}</td>
+				<td>{{ v.series }}</td>
+				<td>{{ v.year }}</td>
+				<td>{{ v.price }}</td>
+				<td>{{ v.engine }}</td>
+				<td>{{ v.fuel_type }}</td>
+				<td>{{ v.tank_capacity }}</td>
+				<td>{{ v.power }}</td>
+				<td>{{ v.seats }}</td>
+				<td>{{ v.transmission }}</td>
+				<td>{{ v.make }}</td>
+				<td>{{ v.drive_type }}</td>
+				<td>{{ v.wheelbase }}</td>
 	  	</tr>
 	{% endfor %}
+	</tbody>
 	</table>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready( function () {
+    $('#resultsTable').DataTable();
+} );
+</script>
 {% endblock %}

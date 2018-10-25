@@ -17,15 +17,7 @@ def home(request):
 def login(request):
 	return render(request, 'main_login.html')
 
-	#Review
-def review(request):
-	return render(request, 'customer_review.html')
-
-#Management sites for data viewing
-	#Management Login Page
-# def manage_login(request):
-# 	return render(request, 'manage_login.html')
-
+#Management Pages
     #Home page
 def manage_home(request):
 	return render(request, 'manage_home.html')

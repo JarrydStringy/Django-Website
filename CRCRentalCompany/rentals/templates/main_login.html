@@ -3,11 +3,11 @@
     <head>
       <!-- Including page data and sources (stylesheet/font) -->
       <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="CRC-style-login.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'CRC-style-login.css' %}">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
       <!-- icon and splash screen -->
-	  <link rel="apple-touch-icon"href="images/homeicon2.jpeg"/>
-	  <link rel="apple-touch-startup-image" href="images/homeicon2.jpeg"/ >
+	  <link rel="apple-touch-icon"href="{% static 'homeicon2.jpeg' %}"/>
+	  <link rel="apple-touch-startup-image" href="{% static 'homeicon2.jpeg' %}"/ >
       <title>CRC - Log In</title>
     </head>
     <body>
@@ -16,9 +16,9 @@
         <div class="home-name"> <!-- Home menu link in form of image -->
           <a href="manage_home.html">
             <!-- Image options - display determined on screen size -->
-            <img class="home-1" src="images/home-name-white.png" alt="Home" height="75"/>
-            <img class="home-2" src="images/home-name-white.png" alt="Home" height="55"/>
-            <img class="home-3" src="images/home-name-white.png" alt="Home" height="45"/>
+            <img class="home-1" src="{% static 'home-name-white.png' %}" alt="Home" height="75"/>
+            <img class="home-2" src="{% static 'home-name-white.png' %}" alt="Home" height="55"/>
+            <img class="home-3" src="{% static 'home-name-white.png' %}" alt="Home" height="45"/>
           </a>
         </div>
       </div>

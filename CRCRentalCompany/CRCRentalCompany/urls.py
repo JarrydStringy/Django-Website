@@ -13,17 +13,12 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),	# '^$' is for / which is the first page
     #login
     url(r'^login/', views.login, name='login'),
-    # url(r'^login/$', auth_views.login, {'template_name': 'templates/main_login.html'}, name='login'),
-    #Customer Reviews
-    url(r'^review/', views.review, name='review'),
 
 #Admin for modifying database from website
     #Admin
     url(r'^admin/', admin.site.urls),
 
 #Management sites for data viewing
-    # #Mangement login page
-    # url(r'^manage/login/', views.manage_login, name='manage_login'),
     #Home page
     url(r'^manage/', views.manage_home, name='manage_home'),
 

@@ -3,55 +3,54 @@
     <head>
       <!-- Including page data and sources (stylesheet/font) -->
       <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="CRC-style-vehicles.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'CRC-style-vehicles.css' %}">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
       <!-- icon and splash screen -->
-	  <link rel="apple-touch-icon"href="images/homeicon2.jpeg"/>
-	  <link rel="apple-touch-startup-image" href="images/homeicon2.jpeg"/ >
+	  <link rel="apple-touch-icon"href="{% static 'homeicon2.jpeg' %}"/>
+	  <link rel="apple-touch-startup-image" href="{% static 'homeicon2.jpeg' %}"/ >
 
       <title> CRC - STORES </title>
     </head>
     <body>
-          <!-- include 'CRC-header.php';   // Include same header for all pages -->
-          <div id="menu"> <!-- Menu Bar as header of every web page, included using php -->
+      <div id="menu"> <!-- Menu Bar as header of every category web page -->
         <div class="home-name"> <!-- Home menu link in form of image -->
           <a href="manage_home.html">
             <!-- Image options - display determined on screen size -->
-            <img class="home-1" src="images/home-name.png" alt="Home" height="75"/>
-            <img class="home-2" src="images/home-name.png" alt="Home" height="55"/>
-            <img class="home-3" src="images/home-name.png" alt="Home" height="45"/>
+            <img class="home-1" src="{% static 'home-name.png' %}" alt="Home" height="75"/>
+            <img class="home-2" src="{% static 'home-name.png' %}" alt="Home" height="55"/>
+            <img class="home-3" src="{% static 'home-name.png' %}" alt="Home" height="45"/>
           </a>
         </div>
         <div class="logout"> <!-- Logout function in form of image -->
         <a href="manage_home.html">
-        	<img class="logout-1" src="images/log-out.png" alt="Account" height="40"/>
-            <!-- Smaller icon options - display determined on screen size -->
-            <img class="logout-2" src="images/log-out.png" alt="Account" height="30"/>
-            <img class="logout-3" src="images/log-out.png" alt="Account" height="20"/>
+        	<!-- Smaller icon options - display determined on screen size -->
+        	<img class="logout-1" src="{% static 'log-out.png' %}" alt="Account" height="40"/>
+            <img class="logout-2" src="{% static 'log-out.png' %}" alt="Account" height="30"/>
+            <img class="logout-3" src="{% static 'log-out.png' %}" alt="Account" height="20"/>
           </a>
         </div>
         <div class="employees"> <!-- Employees page link in form of image -->
           <a href="manage_home.html">
             <!-- Icon options - display determined on screen size -->
-            <img class="employees-1" src="images/employees.png" alt="Search" height="40"/>
-            <img class="employees-2" src="images/employees.png" alt="Search" height="30"/>
-            <img class="employees-3" src="images/employees.png" alt="Search" height="20"/>
+            <img class="employees-1" src="{% static 'employees.png' %}" alt="Search" height="40"/>
+            <img class="employees-2" src="{% static 'employees.png' %}" alt="Search" height="30"/>
+            <img class="employees-3" src="{% static 'employees.png' %}" alt="Search" height="20"/>
           </a>
         </div>
         <div class="customers"> <!-- Customers page link in form of image -->
           <a href="manage_customers.html">
             <!-- Icon options - display determined on screen size -->
-            <img class="customers-1" src="images/customers.png" alt="Search" height="40"/>
-            <img class="customers-2" src="images/customers.png" alt="Search" height="30"/>
-            <img class="customers-3" src="images/customers.png" alt="Search" height="20"/>
+            <img class="customers-1" src="{% static 'customers.png' %}" alt="Search" height="40"/>
+            <img class="customers-2" src="{% static 'customers.png' %}" alt="Search" height="30"/>
+            <img class="customers-3" src="{% static 'customers.png' %}" alt="Search" height="20"/>
           </a>
         </div>
         <div class="vehicles"> <!-- Vehicles page link in form of image -->
           <a href="manage_vehicles.html">
             <!-- Icon options - display determined on screen size -->
-            <img class="vehicles-1" src="images/vehicles.png" alt="Search" height="40"/>
-            <img class="vehicles-2" src="images/vehicles.png" alt="Search" height="30"/>
-            <img class="vehicles-3" src="images/vehicles.png" alt="Search" height="20"/>
+            <img class="vehicles-1" src="{% static 'vehicles.png' %}" alt="Search" height="40"/>
+            <img class="vehicles-2" src="{% static 'vehicles.png' %}" alt="Search" height="30"/>
+            <img class="vehicles-3" src="{% static 'vehicles.png' %}" alt="Search" height="20"/>
           </a>
         </div>
       </div>

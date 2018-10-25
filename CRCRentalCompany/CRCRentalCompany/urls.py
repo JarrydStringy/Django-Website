@@ -6,6 +6,7 @@ from django.contrib.auth import views as auth_views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import path, include
 
 urlpatterns = [
 #Public pages
@@ -17,6 +18,7 @@ urlpatterns = [
 #Admin for modifying database from website
     #Admin
     url(r'^admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
 
 #Management sites for data viewing
     #Home page
@@ -41,5 +43,6 @@ urlpatterns = [
     url(r'^stores/', views.manage_stores, name='manage_stores'),
     #Individual with ID
     url(r'^store/(\d+)/', views.store_id, name='store_id'),
-] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
 urlpatterns += staticfiles_urlpatterns()

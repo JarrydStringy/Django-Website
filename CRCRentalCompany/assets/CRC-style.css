@@ -51,7 +51,7 @@ a:hover, a:visited, a:link, a:active
   height: 85px;
   margin-top: 10px; /* Create whitespace above image */
   margin-bottom: 5px; /* Create whitespace between header and main */
-  background-image: url("images/bg.png");
+  background-image: url("{% static 'bg.png' %}");
   background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
   background-size: cover; /* To cause the image to stretch to fill space */
   display: inline-block;
@@ -106,7 +106,7 @@ a:hover, a:visited, a:link, a:active
   margin-top: 5px;
   min-height: calc(100vh - 230px);  /* To ensure footer sits at bottom of page */
   padding-top: 55px;
-  background-image: url("images/bg.png");
+  background-image: url("bg.png");
   background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
   background-size: cover; /* To cause the image to stretch to fill space */
   display: inline-block;

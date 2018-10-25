@@ -62,7 +62,7 @@ ROOT_URLCONF = 'CRCRentalCompany.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -146,3 +146,6 @@ STATICFILES_DIRS = (    # This is the directory that you should serve static fil
 TEMPLATE_DIRS = (
                 os.path.join(PROJECT_DIR,'assets'),
 )
+
+
+LOGIN_REDIRECT_URL = '/manage'

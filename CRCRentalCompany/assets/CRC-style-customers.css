@@ -12,7 +12,7 @@ body {
   max-width: 90%; /* Create white space on left and right */
   margin: auto; /* Causes entire page content to center in created space */
   height: 100vh;
-} 
+}
 
 /* Override default format for links */
 a:hover, a:visited, a:link, a:active
@@ -192,7 +192,7 @@ a:hover, a:visited, a:link, a:active
 
 /* Specify title bar image, size and position */
 #main {
-  background-image: url("images/bg.png");
+  background-image: url("{% static 'bg.png' %}");
   background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
   background-size: cover; /* To cause the image to stretch to fill space */
   display: inline-block;

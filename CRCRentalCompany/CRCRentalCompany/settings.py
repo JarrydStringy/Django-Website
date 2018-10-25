@@ -147,5 +147,6 @@ TEMPLATE_DIRS = (
                 os.path.join(PROJECT_DIR,'assets'),
 )
 
-
+LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/manage'
+# LOGOUT_REDIRECT_URL = '/'

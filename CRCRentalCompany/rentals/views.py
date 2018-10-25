@@ -13,14 +13,14 @@ from .models import Vehicle
 	#Home Page
 def home(request):
 	return render(request, 'main_home.html')
-    #Login Page
-def login(request):
-	return render(request, 'main_login.html')
 
 #Management Pages
     #Home page
 def manage_home(request):
 	return render(request, 'manage_home.html')
+
+def analytics(request):
+	return render(request, 'analytics.html')
 
     #Vehicles
 def manage_vehicles(request):
@@ -32,6 +32,10 @@ def vehicle_id(request, id):
 	except Vehicle.DoesNotExist:				#Show message if not found
 		raise Http404('Vehicle not found :(')
 	return render(request, 'detail_vehicle.html', {'vehicle': vehicle})
+	#Query set
+def vehicle_query(request):
+	vehicle = Vehicle.objects.raw('SELECT * FROM rentals_vehicle')
+	return render(request, 'query_vehicle.html', {'vehicle': vehicle})
 
     #Customers
 def manage_customers(request):

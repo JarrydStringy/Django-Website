@@ -2,11 +2,12 @@
 {% block content %}
 <div>
 	<h3>Customer ID: {{ customer.id }}</h3>
-	<p>Name: {{ customer.customerName }}</p>
-	<p>Phone: {{ customer.customerPhone }}</p>
-	<p>Address: {{ customer.customerAddress }}</p>
-	<p>Birthday: {{ customer.customerBirthday|date:"d M Y" }}</p>
-	<p>Occupation: {{ customer.customerOccupation }}</p>
-	<p>Gender: {{ customer.customerGender }}</p>
+	<p>Name: {{ customer.customer_name }}</p>
+	<p>Phone: {{ customer.customer_phone }}</p>
+	<p>Address: {{ customer.customer_address }}</p>
+	<p>Birthday: {{ customer.customer_birthday}}</p>
+	<p>Occupation: {{ customer.customer_occupation }}</p>
+	<p>Gender: {{ customer.customer_gender }}</p>
+	</object>
 </div>
 {% endblock %}

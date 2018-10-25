@@ -36,20 +36,17 @@ Users created:
 		username: admin
 		password: SuperSonic
 	Management
-		username: manager
+		username: Manager
 		password: PassLevel1
 	Staff
-		username: staff
+		username: Staff
 		password: PassLevel2
 	Public
-		username: public
+		username: Customer
 		password: PassLevel3
 	Me
 		username: Jarryd
 		password: NewAccount
-
-Creating login and logout
-	https://simpleisbetterthancomplex.com/tutorial/2016/06/27/how-to-use-djangos-built-in-login-system.html
 
 Using python shell to search database
 	in cmd "python manage.py shell"

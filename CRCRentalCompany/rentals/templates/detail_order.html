@@ -2,12 +2,12 @@
 {% block content %}
 <div>
 	<h3>Order ID: {{ order.id }}</h3>
-	<p>Order Creation Date: {{ order.orderCreateDate|date:"d M Y" }}</p>
-	<p>Pickup Date: {{ order.pickupDate|date:"d M Y" }}</p>
-	<p>Car ID: {{ order.carId }}</p>
-	<p>Customer ID: {{ order.customerId }}</p>
-	<p>Pickup Store ID: {{ order.pickupStoreId }}</p>
-	<p>Return Store ID: {{ order.returnStoreId }}</p>
-	<p>Return Date: {{ order.returnDate|date:"d M Y" }}</p>
+	<p>Order Creation Date: {{ order.order_create_date }}</p>
+	<p>Pickup Date: {{ order.pickup_date }}</p>
+	<p>Car ID: {{ order.car_id }}</p>
+	<p>Customer ID: {{ order.customer_id }}</p>
+	<p>Pickup Store ID: {{ order.pickup_store_id }}</p>
+	<p>Return Store ID: {{ order.return_store_id }}</p>
+	<p>Return Date: {{ order.return_date }}</p>
 </div>
 {% endblock %}

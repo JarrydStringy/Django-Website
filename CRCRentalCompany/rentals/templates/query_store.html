@@ -1,0 +1,48 @@
+{%  extends "base_vehicle.html" %}
+{% block content %}
+<div>
+	<form method="get">
+	    {{ filter.form.as_p }}
+	    <button type="submit">Search</button>
+	</form>
+
+<table>
+	<tr>
+		<th>Vehicle ID</th>
+		<th>Make</th>
+		<th>Model</th>
+		<th>Series</th>
+		<th>Year</th>
+		<th>Price</th>
+		<th>Engine</th>
+		<th>Fuel Type</th>
+		<th>Tank Capacity</th>
+		<th>Power</th>
+		<th>Seats</th>
+		<th>Transmission</th>
+		<th>Body Type</th>
+		<th>Drive Type</th>
+		<th>Wheelbase</th>
+
+	{% for v in vehicle %}
+			<tr>
+				<th>{{ v.id }}</th>
+				<th>{{ v.make }}</th>
+				<th>{{ v.model }}</th>
+				<th>{{ v.series }}</th>
+				<th>{{ v.year }}</th>
+				<th>{{ v.price }}</th>
+				<th>{{ v.engine }}</th>
+				<th>{{ v.fuelType }}</th>
+				<th>{{ v.tankCapacity }}</th>
+				<th>{{ v.power }}</th>
+				<th>{{ v.seats }}</th>
+				<th>{{ v.transmission }}</th>
+				<th>{{ v.make }}</th>
+				<th>{{ v.driveType }}</th>
+				<th>{{ v.wheelbase }}</th>
+	  	</tr>
+	{% endfor %}
+	</table>
+</div>
+{% endblock %}

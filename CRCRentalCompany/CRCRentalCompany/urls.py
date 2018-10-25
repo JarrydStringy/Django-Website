@@ -7,19 +7,18 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 urlpatterns = [
 #Public pages
 	#Home Page
     url(r'^$', views.home, name='home'),	# '^$' is for / which is the first page
-    #login
-    url(r'^login/', views.login, name='login'),
 
 #Admin for modifying database from website
     #Admin
     url(r'^admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-
+    # /login, /logout, /password_change,
 #Management sites for data viewing
     #Home page
     url(r'^manage/', views.manage_home, name='manage_home'),
@@ -28,6 +27,8 @@ urlpatterns = [
     url(r'^vehicles/', views.manage_vehicles, name='manage_vehicles'),
     #Individual with ID
     url(r'^vehicle/(\d+)/', views.vehicle_id, name='vehicle_id'),
+    #Query
+    url(r'^vehicle/query/', views.vehicle_query, name='vehicle_query'),
 
     #Customers
     url(r'^customers/', views.manage_customers, name='manage_customers'),
@@ -43,6 +44,9 @@ urlpatterns = [
     url(r'^stores/', views.manage_stores, name='manage_stores'),
     #Individual with ID
     url(r'^store/(\d+)/', views.store_id, name='store_id'),
+
+    # Analytics
+    url(r'^analytics/', views.analytics, name='analytics'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

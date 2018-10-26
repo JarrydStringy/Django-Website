@@ -14,7 +14,7 @@
     <body>
       <div id="menu">  <!-- Menu Bar as header of every category web page -->
         <div class="home-name"> <!-- Home menu link in form of image -->
-          <a href="manage_home.html">
+          <a href="http://localhost:8000/manage/">
             <!-- Image options - display determined on screen size -->
             <img class="home-1" src="{% static 'home-name.png' %}" alt="Home" height="75"/>
             <img class="home-2" src="{% static 'home-name.png' %}" alt="Home" height="55"/>
@@ -22,7 +22,7 @@
           </a>
         </div>
         <div class="logout"> <!-- Logout function in form of image -->
-        <a href="manage_home.html">
+        <a href="http://localhost:8000/manage/">
         	<!-- Smaller icon options - display determined on screen size -->
         	<img class="logout-1" src="{% static 'log-out.png' %}" alt="Account" height="40"/>
             <img class="logout-2" src="{% static 'log-out.png' %}" alt="Account" height="30"/>
@@ -30,7 +30,7 @@
           </a>
         </div>
         <div class="employees"> <!-- Employees page link in form of image -->
-          <a href="manage_home.html">
+          <a href="http://localhost:8000/manage/">
             <!-- Icon options - display determined on screen size -->
             <img class="employees-1" src="{% static 'employees.png' %}" alt="Search" height="40"/>
             <img class="employees-2" src="{% static 'employees.png' %}" alt="Search" height="30"/>
@@ -38,7 +38,7 @@
           </a>
         </div>
         <div class="customers"> <!-- Customers page link in form of image -->
-          <a href="manage_customers.html">
+          <a href="http://localhost:8000/customers/">
             <!-- Icon options - display determined on screen size -->
             <img class="customers-1" src="{% static 'customers.png' %}" alt="Search" height="40"/>
             <img class="customers-2" src="{% static 'customers.png' %}" alt="Search" height="30"/>
@@ -46,7 +46,7 @@
           </a>
         </div>
         <div class="vehicles"> <!-- Vehicles page link in form of image -->
-          <a href="manage_vehicles.html">
+          <a href="http://localhost:8000/vehicles/">
             <!-- Icon options - display determined on screen size -->
             <img class="vehicles-1" src="{% static 'vehicles.png' %}" alt="Search" height="40"/>
             <img class="vehicles-2" src="{% static 'vehicles.png' %}" alt="Search" height="30"/>
@@ -66,23 +66,23 @@
       </div>
       <!--include 'CRC-sitemap.php';  //Include same footer for all pages -->
       <div id="sitemap"> <!-- Footer for every web page, showing site map, included using php -->
-        <a href="manage_home.html">  <!-- Home menu link in form of text -->
+        <a href="http://localhost:8000/manage/">  <!-- Home menu link in form of text -->
           <h1> Home</h1>
         </a>
         <h1> | </h1> <!-- Line for break between sitemap items (separate for spacing) -->
-        <a href="manage_vehicles.html"> <!-- Search page link in form of image -->
+        <a href="http://localhost:8000/vehicles/"> <!-- Search page link in form of image -->
           <h1> Vehicles </h1>
         </a>
         <h1> | </h1>
-        <a href="manage_customers.html"> <!-- Search page link in form of image -->
+        <a href="http://localhost:8000/customers/"> <!-- Search page link in form of image -->
           <h1> Customers </h1>
         </a>
         <h1> | </h1>
-        <a href="manage_employees.html"> <!-- Search page link in form of image -->
-          <h1> Employees </h1>
+        <a href="http://localhost:8000/orders"> <!-- Search page link in form of image -->
+          <h1> Orders </h1>
         </a>
         <h1> | </h1>
-        <a href="manage_login.html"> <!-- Account registration link in form of image -->
+        <a href="http://localhost:8000/accounts/login/"> <!-- Account registration link in form of image -->
           <h1> Logout </h1>
         </a>
       </div>

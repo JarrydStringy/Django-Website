@@ -17,21 +17,24 @@
         <div class="home-name"> <!-- Home menu link in form of image -->
           <a href="manage_home.html">
             <!-- Image options - display determined on screen size -->
-            <img class="home-1" src="{% static 'home-name-white.png' %}" alt="Home" height="75"/>
-            <img class="home-2" src="{% static 'home-name-white.png' %}" alt="Home" height="55"/>
-            <img class="home-3" src="{% static 'home-name-white.png' %}" alt="Home" height="45"/>
+            <img class="home-1" src="{% static 'home-name.png' %}" alt="Home" height="75"/>
+            <img class="home-2" src="{% static 'home-name.png' %}" alt="Home" height="55"/>
+            <img class="home-3" src="{% static 'home-name.png' %}" alt="Home" height="45"/>
           </a>
         </div>
       </div>
       <div id="main">
       	<div class="button">
-          <input type="submit" name="submit" value="Vehicles" onclick="window.location='manage_vehicles.html';"/>
+          <input type="submit" name="submit" value="Vehicles" onclick="window.location='http://localhost:8000/vehicles/';"/>
         </div>
         <div class="button">
-          <input type="submit" name="submit" value="Customers" onclick="window.location='manage_customers.html';"/>
+          <input type="submit" name="submit" value="Customers" onclick="window.location='http://localhost:8000/customers/';"/>
         </div>
         <div class="button">
-          <input type="submit" name="submit" value="Employees" onclick="window.location='manage_employees.html';"/>
+          <input type="submit" name="submit" value="Orders" onclick="window.location='http://localhost:8000/orders/';"/>
+        </div>
+        <div class="button">
+          <input type="submit" name="submit" value="Stores" onclick="window.location='http://localhost:8000/stores/';"/>
         </div>
       </div>
 
@@ -49,7 +52,7 @@
           <h1> Customers </h1>
         </a>
         <h1> | </h1>
-        <a href="manage_employees.html"> <!-- Search page link in form of image -->
+        <a href="http://localhost:8000/customers/manage_employees.html"> <!-- Search page link in form of image -->
           <h1> Employees </h1>
         </a>
         <h1> | </h1>

@@ -1,6 +1,4 @@
-/* ALL (same for every page) */
-
-/* Formatting that applies to entire webpage body */
+{% load static %}
 html {
   height: 100%;
 }
@@ -51,7 +49,7 @@ a:hover, a:visited, a:link, a:active
   height: 85px;
   margin-top: 10px; /* Create whitespace above image */
   margin-bottom: 5px; /* Create whitespace between header and main */
-  background-image: url("bg.png");
+  background-image: url("{% static 'bg.png' %}");
   background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
   background-size: cover; /* To cause the image to stretch to fill space */
   display: inline-block;
@@ -126,7 +124,7 @@ a:hover, a:visited, a:link, a:active
   margin-bottom: 80px;
   padding: 25px 15px 10px 15px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-  background-image: url("bg.png");
+  background-image: url("{% static 'bg.png' %}");
   background-repeat: no-repeat; /* To ensure it doesn't repeat image to fill space */
   background-size: cover; /* To cause the image to stretch to fill space */
 }

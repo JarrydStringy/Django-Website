@@ -89,7 +89,6 @@ DATABASES = {
 
         # This is for a postgreSQL database
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'crc',
         'USER': 'SuperSonicAdmin',
         'PASSWORD': 'SuperSonic',

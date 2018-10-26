@@ -1,6 +1,4 @@
-/* ALL (same for every page) */
-
-/* Formatting that applies to entire webpage body */
+{% load static %}
 html {
   height: 100vh;
 }
